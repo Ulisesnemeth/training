@@ -1,13 +1,12 @@
 function solution(A) {
     // write your code in JavaScript (Node.js 8.9.4)
-    var value = false
-    while(value == false){
-        var element = A.pop()
-        if(A.includes(element)){
-            A.splice(A.indexOf(element),1)
+    A.sort()
+    for (let i = 0; i < A.length; i = i+2) {
+        if(A[i]==A[i+1]){
+            
         }else{
-            var uniqueelement = element
-            value = true
+            var uniqueelement = A[i]
+            break
         }
     }
     return uniqueelement
