@@ -14,4 +14,4 @@ function solution(N) {
     });
     return binarygap
 }
-solution(1041)
+console.log(solution(1041))
