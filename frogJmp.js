@@ -1,10 +1,17 @@
 function solution(X, Y, D) {
     // write your code in JavaScript (Node.js 8.9.4)
-    var jumpcounter=0
-    while(X<Y){
-        X=X+D
-        jumpcounter++
+    if(D>(Y-X)){
+        if (X>=Y){
+            return 0
+        }else{
+            return 1
+        }
     }
-    return jumpcounter
+    jumpcounter = (Y-X)/D
+    if(parseInt(jumpcounter)<jumpcounter){
+        return (parseInt(jumpcounter)+1)
+    }else{
+        return jumpcounter
+    }
 }
-console.log(solution(10, 99999, 1))
+console.log(solution(10, 85, 30))
